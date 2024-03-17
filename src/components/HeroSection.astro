@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import Decoration1 from "../components/Decoration1.astro";
+import Decoration2 from "../components/Decoration2.astro";
+import oriannaApp from "../assets/preview.png";
+---
+
+<div class="pt-10 pt-md-24 bg-primary">
+  <div class="container-xl max-w-screen-xl">
+    <div class="row justify-content-md-center">
+      <div class="col-md-10 col-xl-8 text-md-center">
+        <div>
+          <h1 class="ls-tight font-bolder display-3 text-white mb-7">
+            Potenciando tu
+            <span class="d-inline-block py-1 bg-success"> Capital Humano,</span>
+            optimizando tu empresa
+          </h1>
+          <p class="lead text-white text-opacity-75 mb-10">
+            Sistema de Información de Recursos Humanos modular y escalable. Una solución diseñada para crecer contigo, adaptándose a las necesidades cambiantes de tu organización.
+          </p>
+          <div class="mx-sm-n2">
+            <a href="/contacto" class="btn btn-lg btn-white my-2 mx-sm-2 w-full w-sm-auto">Conócenos</a>
+            <a href="#productos" class="btn btn-lg btn-primary bg-shade-primary my-2 mx-sm-2 w-full w-sm-auto">
+              Nuestros productos <span class="ms-2">-&gt;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-10 mt-md-24">
+      <div class="col-lg-12 text-lg-center mb-n20 mb-md-n40 position-relative overlap-10">
+        <!-- Image -->
+        <div class="position-relative overlap-10">
+          <Image src={oriannaApp} alt="orianna app" class="img-fluid rounded-3 shadow-5" />
+        </div>
+        <!-- Decorations -->
+        <Decoration1 />
+        <Decoration2 />
+      </div>
+    </div>
+  </div>
+</div>
