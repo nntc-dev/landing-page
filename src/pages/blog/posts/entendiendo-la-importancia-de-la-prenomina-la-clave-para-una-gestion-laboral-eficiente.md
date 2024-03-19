@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogLayout.astro
+layout: ../../../layouts/TextLayout.astro
 title: Entendiendo la importancia de la prenómina. La clave para una gestión laboral eficiente
 ---
 # Entendiendo la importancia de la prenómina: La clave para una gestión laboral eficiente

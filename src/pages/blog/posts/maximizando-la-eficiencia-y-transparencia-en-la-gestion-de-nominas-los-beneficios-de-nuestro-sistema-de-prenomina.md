@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogLayout.astro
+layout: ../../../layouts/TextLayout.astro
 title: Maximizando la eficiencia y transparencia en la gestión de nóminas. Los beneficios de nuestro sistema de prenómina
 ---
 # Maximizando la eficiencia y transparencia en la gestión de nóminas: Los beneficios de nuestro sistema de prenómina
