@@ -1,0 +1,115 @@
+---
+import { Image } from "astro:assets";
+import nntclogo from "../assets/nntc-logo.png";
+import linkedInIcon from "../assets/linkedin.png";
+import facebookIcon from "../assets/facebook.png";
+import instagramIcon from "../assets/instagram.png";
+import tiktokIcon from "../assets/tiktok.png";
+import whatsappIcon from "../assets/whatsapp.png";
+
+---
+
+<footer class="pt-10 bg-surface-dark">
+  <div class="container max-w-screen-xl">
+    <!-- Call to action -->
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <!-- Title -->
+            <h3 class="h2 text-white mb-1">Potenciando tu talento, optimizando tu empresa</h3>
+            <!-- Text -->
+            <p class="lead mb-0 text-white opacity-8">Transformando datos en acciones, impulsando el éxito de tu equipo.</p>
+          </div>
+          <div class="col-lg-5 text-lg-end mt-4 mt-lg-0">
+            <div class="mx-n2">
+              <a href="/contacto" class="btn btn-primary shadow-sm mx-2 px-lg-8"> Contáctanos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-10 mb-16 border-light opacity-10" />
+    <div class="row">
+      <div class="col-lg-3 mb-5 mb-lg-0">
+        <!-- Brand -->
+        <div class="text-white">
+          <Image src={nntclogo} alt="nntc logo" width="40" />
+        </div>
+        <!-- Text -->
+        <p class="text-sm text-white opacity-8 mt-5 mb-5">
+          Sistema de Recursos Humanos modular y escalable. Una solución diseñada para crecer contigo, adaptándose a las necesidades cambiantes de tu organización.
+        </p>
+        <!-- Social -->
+        <ul class="list-inline mx-n2 mb-0">
+          <li class="list-inline-item">
+            <a class="p-2 text-white text-opacity-75 text-white-hover" href="https://www.linkedin.com/company/nntc-soluciones">
+              <Image src={linkedInIcon} alt="linkedin" width="24" />
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="p-2 text-white text-opacity-75 text-white-hover" href="https://www.facebook.com/nntcsoluciones">
+              <Image src={facebookIcon} alt="facebook" width="24" />
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="p-2 text-white text-opacity-75 text-white-hover" href="https://www.instagram.com/nntcsoluciones">
+              <Image src={instagramIcon} alt="instagram" width="24" />
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="p-2 text-white text-opacity-75 text-white-hover" href="https://www.tiktok.com/@nntcsoluciones">
+              <Image src={tiktokIcon} alt="tiktok" width="24" />
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="p-2 text-white text-opacity-75 text-white-hover" href="https://api.whatsapp.com/send?phone=528331826169">
+              <Image src={whatsappIcon} alt="whatsapp" width="24" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-sm-3 col-6 ms-lg-auto mb-4 mb-sm-0">
+        <!-- Title -->
+        <h6 class="text-light opacity-9 mb-3">Acerca de:</h6>
+        <!-- List -->
+        <ul class="list-unstyled text-sm">
+          <li class="py-1">
+            <a href="#" class="text-white text-opacity-75 text-white-hover">Productos</a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="text-white text-opacity-75 text-white-hover">Nosotros</a>
+          </li>
+          <li class="py-1">
+            <a href="#" class="text-white text-opacity-75 text-white-hover">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-sm-3 col-6 mb-4 mb-sm-0">
+        <!-- Title -->
+        <h6 class="text-light opacity-9 mb-3">Compañía:</h6>
+        <!-- List -->
+        <ul class="list-unstyled text-sm">
+          <li class="py-1">
+            <a href="#" class="text-white text-opacity-75 text-white-hover">Términos y condiciones</a>
+          </li>
+          <li class="py-1">
+            <a href="/avisoprivacidad" class="text-white text-opacity-75 text-white-hover">Aviso de privacidad</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="mt-16 mb-7 border-light opacity-10" />
+    <div class="row align-items-center justify-content-md-between pb-7">
+      <div class="col-md-6">
+        <div class="copyright text-sm text-center text-md-start text-light">
+          &copy; 2024
+          <a href="#" class="h6 text-light text-sm font-bold">NNTC</a>. Todos los derechos reservados.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0 mx-n3"></ul>
+      </div>
+    </div>
+  </div>
+</footer>

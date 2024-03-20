@@ -1,6 +1,7 @@
 ---
 // import { ViewTransitions } from "astro:transitions";
 import NavSection from "../components/NavSection.astro";
+import FooterSection from "../components/FooterSection.astro";
 import "../styles/nntc-webpixels.css";
 import "../styles/styles.css";
 import "../styles/md-styles.css";
@@ -28,6 +29,7 @@ const { title } = Astro.props;
     <div class="container-lg py-7">
       <slot />
     </div>
+    <FooterSection />
     <script src="../js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
