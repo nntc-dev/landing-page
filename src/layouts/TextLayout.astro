@@ -24,9 +24,9 @@ const { title } = Astro.props;
     <!-- <ViewTransitions /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/font/bootstrap-icons.min.css" />
   </head>
-  <body style="overflow-x: hidden;">
+  <body>
     <NavSection />
-    <div class="container-lg py-7">
+    <div class="container max-w-screen-xl py-7">
       <slot />
     </div>
     <FooterSection />
