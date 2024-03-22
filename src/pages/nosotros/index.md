@@ -24,3 +24,5 @@ Contacto: Para obtener más información sobre nuestras soluciones HRIS o para p
 - Teléfono: 8331826169
 - Correo electrónico: contacto@nntc.com.mx
 - Nuestras redes sociales.
+
+![Nosotros.](../../assets/nosotros.png)
