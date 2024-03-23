@@ -1,17 +1,59 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import coverBlog1 from "../../assets/blog/blog1.png";
+import avatarMarketing from "../../assets/avatars/panda.png";
 ---
 
 <Layout title="Blog">
   <div class="container-xl max-w-screen-xl py-7">
-    <h1 class="mb-8">Blog</h1>
-    <div class="row">
-      <div class="col-12">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Entendiendo la importancia de la prenómina: La clave para una gestión laboral eficiente</h3>
-            <p class="card-text">En el mundo de la gestión empresarial, cada detalle cuenta. Uno de los aspectos fundamentales para mantener el orden y la transparencia en las relaciones laborales es la prenómina.</p>
-            <a href="/blog/posts/entendiendo-la-importancia-de-la-prenomina-la-clave-para-una-gestion-laboral-eficiente" class="btn btn-primary">Ver más...</a>
+    <!-- Section title -->
+    <div class="row justify-content-center text-md-center mb-24">
+      <div class="col-lg-7">
+        <!-- Heading -->
+        <h1 class="mb-5">
+          Blog
+        </h1>
+        <!-- Text -->
+        <p class="lead">
+          
+        </p>
+      </div>
+    </div>
+    <!-- Content -->
+    <div class="row g-10">
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="card border-0 shadow-3">
+          <!-- Image -->
+          <a class="card-img-top" href="/blog/posts/entendiendo-la-importancia-de-la-prenomina-la-clave-para-una-gestion-laboral-eficiente">
+            <Image src={coverBlog1} alt="cover blog" class="img-fluid rounded" />
+          </a>
+          <!-- Body -->
+          <div class="px-7 pt-7 flex-none mt-auto position-relative overlap-10">
+            <!-- Heading -->
+            <a href="/blog/posts/entendiendo-la-importancia-de-la-prenomina-la-clave-para-una-gestion-laboral-eficiente" class="d-inline-block h3 mb-3 stretched-link">
+              Entendiendo la importancia de la prenómina: La clave para una gestión laboral eficiente
+            </a>
+            <!-- Text -->
+            <p class="mb-0">
+              En el mundo de la gestión empresarial, cada detalle cuenta. Uno de los aspectos fundamentales para mantener el orden y la transparencia en las relaciones laborales es la prenómina.
+            </p>
+          </div>
+          <hr class="mx-7 my-7" />
+          <!-- Meta -->
+          <div class="px-7 pb-7 border-0 d-flex align-items-center w-full position-relative">
+            <!-- Avatar -->
+            <div class="avatar avatar-sm me-2">
+              <Image src={avatarMarketing} alt="cover blog" class="avatar-img rounded-circle" />
+            </div>
+            <!-- Author -->
+            <h6 class="h6 font-semibold text-muted ms-2 stretched-link">
+              NNTC Marketing
+            </h6>
+            <!-- Date -->
+            <p class="text-sm text-muted mb-0 ms-auto">
+              <!-- <time datetime="2019-05-02">May 02</time> -->
+            </p>
           </div>
         </div>
       </div>
