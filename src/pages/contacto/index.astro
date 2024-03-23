@@ -82,7 +82,7 @@ import Layout from "../../layouts/Layout.astro";
                 <span class="mt-2 invalid-feedback">Este valor es requerido</span>
               </div>
             </div>
-            <div class="col-11">
+            <div class="col-12">
               <div class="">
                 <label class="form-label" for="num_empleados">Número de empleados</label>
                 <input type="number" class="form-control" id="num_empleados" min="1" required />
@@ -193,12 +193,30 @@ import Layout from "../../layouts/Layout.astro";
       </div>
     </div>
   </div>
+  <div class="modal" id="modal_message" tabindex="-1" aria-labelledby="modal_message" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow-3">
+      <div class="modal-header">
+        <h5 class="modal-title">Contacto</h5>
+        <div class="text-xs ms-auto">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p>
+          Gracias por contactarnos, en breve nos pondremos en contacto contigo.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-neutral" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 </Layout>
 
 <script>
   init();
-
-  //document.addEventListener("astro:after-swap", init);
 
   function init() {
     let code: string;
@@ -226,6 +244,14 @@ import Layout from "../../layouts/Layout.astro";
       false
     );
 
+    const modalMessage = document.getElementById("modal_message");
+
+    if (modalMessage) {
+      modalMessage.addEventListener('hidden.bs.modal', event => {
+        window.location.reload();
+      });
+    }
+
     function submitform() {
       const intereses = checks
         .filter((item) => (item as HTMLInputElement).checked)
@@ -251,7 +277,10 @@ import Layout from "../../layouts/Layout.astro";
         },
         body: JSON.stringify(data),
       }).then(() => {
-        window.location.reload();
+        const modalMessage = document.getElementById("modal_message");
+        const modal = bootstrap.Modal.getOrCreateInstance(modalMessage);
+        modal.toggle();
+        //window.location.reload();
       });
     }
 
