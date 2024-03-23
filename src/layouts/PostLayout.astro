@@ -1,0 +1,49 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import NavSection from "../components/NavSection.astro";
+import FooterSection from "../components/FooterSection.astro";
+import PostCoverImage from "../components/PostCoverImage.astro";
+import PostAvatarImage from "../components/PostAvatarImage.astro";
+import "../styles/nntc-webpixels.css";
+import "../styles/styles.css";
+import "../styles/md-styles.css";
+interface Props {
+  title: string;
+}
+
+const { title, frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="NNTC Landing Page" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <NavSection />
+    <div class="container max-w-screen-xl py-7">
+      <PostCoverImage imagePath={frontmatter.cover} altText="cover" />
+      <h1 class="title">{frontmatter.title}</h1>
+      <div class="pb-4 border-0 d-flex align-items-center w-full position-relative">
+        <div class="avatar avatar-sm me-2">
+          <PostAvatarImage imagePath={frontmatter.avatar} altText="avatar" classText="avatar-img rounded-circle" />
+        </div>
+        <h5 class="font-semibold text-muted ms-2 stretched-link">{frontmatter.author}</h5>
+      </div>
+      <div class="tags">
+        {
+          frontmatter.tags.split(" ").map((el: string) => <span class="badge badge-pill bg-primary me-2">{el}</span>)
+        }
+      </div>
+      <slot />
+    </div>
+    <FooterSection />
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+   imagePath: string;
+   altText: string;
+}
+
+const { imagePath, altText, } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/blog/*.{jpeg,jpg,png,gif}');
+if (!images["/src/assets/blog/" + imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/blog/*.{jpeg,jpg,png,gif}"`);
+---
+<Image class="cover" src={images["/src/assets/blog/" + imagePath]()} alt={altText} transition:name={imagePath} />

@@ -1,8 +1,7 @@
 ---
-// import { ViewTransitions } from "astro:transitions";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../../layouts/BlogLayout.astro";
 import { Image } from "astro:assets";
-import coverBlog1 from "../../assets/blog/blog1.png";
+import coverBlog1 from "../../assets/blog/cover001.png";
 import avatarMarketing from "../../assets/avatars/panda.png";
 ---
 
@@ -27,7 +26,7 @@ import avatarMarketing from "../../assets/avatars/panda.png";
         <div class="card border-0 shadow-3">
           <!-- Image -->
           <a class="card-img-top" href="/blog/posts/entendiendo-la-importancia-de-la-prenomina-la-clave-para-una-gestion-laboral-eficiente">
-            <Image src={coverBlog1} alt="cover blog" class="img-fluid rounded" />
+            <Image src={coverBlog1} alt="cover blog" class="img-fluid rounded" transition:name="cover001.png" />
           </a>
           <!-- Body -->
           <div class="px-7 pt-7 flex-none mt-auto position-relative overlap-10">
