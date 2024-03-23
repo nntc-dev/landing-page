@@ -216,6 +216,8 @@ import Layout from "../../layouts/Layout.astro";
 </Layout>
 
 <script>
+  import * as bootstrap from "bootstrap"
+
   init();
 
   function init() {
@@ -278,6 +280,7 @@ import Layout from "../../layouts/Layout.astro";
         body: JSON.stringify(data),
       }).then(() => {
         const modalMessage = document.getElementById("modal_message");
+        if (!modalMessage) return;
         const modal = bootstrap.Modal.getOrCreateInstance(modalMessage);
         modal.toggle();
         //window.location.reload();
