@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import GoogleTag from "../components/GoogleTag.astro";
 import NavSection from "../components/NavSection.astro";
 import FooterSection from "../components/FooterSection.astro";
 import "../styles/nntc-webpixels.css";
@@ -22,6 +23,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
+    <GoogleTag />
   </head>
   <body>
     <NavSection />
