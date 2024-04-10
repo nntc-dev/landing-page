@@ -1,0 +1,22 @@
+---
+---
+<!-- Google Tag Manager -->
+<script>
+    interface Window {
+        [key: string]: any;
+    }
+
+    (function(w: Window, d: Document, s: string, l: string, i: string) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        const f: HTMLElement | null = d.getElementsByTagName(s)[0] as HTMLElement;
+        const j: HTMLScriptElement = d.createElement(s) as HTMLScriptElement;
+        const dl: string = l !== 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        if (f) {
+            f.parentNode?.insertBefore(j, f);
+        }
+    })(window,document,'script','dataLayer','GTM-55H23X5P');
+</script>
+<!-- End Google Tag Manager -->
