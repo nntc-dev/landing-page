@@ -2,6 +2,7 @@
 import Layout from "../../layouts/BlogLayout.astro";
 import { Image } from "astro:assets";
 import coverBlog1 from "../../assets/blog/cover001.png";
+import coverBlog2 from "../../assets/blog/cover002.png";
 import avatarMarketing from "../../assets/avatars/panda.png";
 ---
 
@@ -22,6 +23,41 @@ import avatarMarketing from "../../assets/avatars/panda.png";
     </div>
     <!-- Content -->
     <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="card border-0 shadow-3">
+          <!-- Image -->
+          <a class="card-img-top" href="/blog/posts/maximizando-la-eficiencia-operativa-la-necesidad-de-un-sistema-de-tiempo-y-asistencia-en-las-empresas">
+            <Image src={coverBlog2} alt="cover blog" class="img-fluid rounded" transition:name="cover002.png" />
+          </a>
+          <!-- Body -->
+          <div class="px-7 pt-7 flex-none mt-auto position-relative overlap-10">
+            <!-- Heading -->
+            <a href="/blog/posts/maximizando-la-eficiencia-operativa-la-necesidad-de-un-sistema-de-tiempo-y-asistencia-en-las-empresas" class="d-inline-block h3 mb-3 stretched-link">
+              Maximizando la eficiencia operativa: La necesidad de un sistema de tiempo y asistencia en las empresas
+            </a>
+            <!-- Text -->
+            <p class="mb-0">
+              En el mundo de la gestión empresarial, cada detalle cuenta. Uno de los aspectos fundamentales para mantener el orden y la transparencia en las relaciones laborales es la prenómina.
+            </p>
+          </div>
+          <hr class="mx-7 my-7" />
+          <!-- Meta -->
+          <div class="px-7 pb-7 border-0 d-flex align-items-center w-full position-relative">
+            <!-- Avatar -->
+            <div class="avatar avatar-sm me-2">
+              <Image src={avatarMarketing} alt="cover blog" class="avatar-img rounded-circle" />
+            </div>
+            <!-- Author -->
+            <h6 class="h6 font-semibold text-muted ms-2 stretched-link">
+              NNTC Marketing
+            </h6>
+            <!-- Date -->
+            <p class="text-sm text-muted mb-0 ms-auto">
+              <!-- <time datetime="2019-05-02">May 02</time> -->
+            </p>
+          </div>
+        </div>
+      </div>
       <div class="col-12 col-md-6 col-lg-4 d-flex">
         <div class="card border-0 shadow-3">
           <!-- Image -->

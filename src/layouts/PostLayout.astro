@@ -43,7 +43,7 @@ const { title, frontmatter } = Astro.props;
       </div>
       <div class="tags">
         {
-          frontmatter.tags.split(" ").map((el: string) => <span class="badge badge-pill bg-primary me-2">{el}</span>)
+          (frontmatter.tags ? frontmatter.tags.split(" ").map((el: string) => <span class="badge badge-pill bg-primary me-2">{el}</span>) : "")
         }
       </div>
       <slot />
